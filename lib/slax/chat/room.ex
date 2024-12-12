@@ -3,8 +3,8 @@ defmodule Slax.Chat.Room do
   import Ecto.Changeset
 
   schema "rooms" do
-    field :name, :string
-    field :topic, :string
+    field(:name, :string)
+    field(:topic, :string)
 
     timestamps(type: :utc_datetime)
   end
