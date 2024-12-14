@@ -18,9 +18,9 @@ defmodule SlaxWeb.Router do
     pipe_through(:browser)
 
     # get "/", PageController, :home
-    get("/home", PageController, :home)
     live("/", ChatRoomLive)
     live("/rooms/:id", ChatRoomLive)
+    live("/rooms/:id/edit", ChatRoomLive.Edit)
   end
 
   # Other scopes may use custom stacks.
